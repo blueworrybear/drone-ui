@@ -12,10 +12,10 @@ import Repo from "../views/Repo.vue";
 import Settings from "../views/Settings.vue";
 import Search from "../views/Search.vue";
 import BuildsFeed from "../views/BuildsFeed.vue";
-
+export const base = process.env.VUE_APP_DRONE_BASE || "/";
 export default new Router({
   mode: "history",
-  base: "/",
+  base: `${base}`,
   routes: [
     {
       path: "/login/form",

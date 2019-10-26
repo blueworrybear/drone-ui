@@ -33,3 +33,31 @@ npm run test
 ```
 npm run lint
 ```
+
+### Enable Base URL
+
+1. Update vue.config.js
+
+```
+module.exports = {
+  lintOnSave: false,
+  productionSourceMap: false,
+  outputDir: "dist/files",
+  publicPath: "/drone/"
+};
+```
+
+The `publicPath` will be your base URL for proxy.
+
+2. Create .env.development
+
+Add following content:
+
+```
+VUE_APP_DRONE_SERVER=http://127.0.0.1/drone
+VUE_APP_DRONE_BASE=/drone
+```
+
+> Notice that you should not setenv VUE_APP_DRONE_XXXX when you run `npm run build`
+
+

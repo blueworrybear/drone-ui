@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="login">
-      <form action="/login" method="POST">
+      <form :action="this.$store.state.base + '/login'" method="POST">
         <div class="logo"><Logo /></div>
         <BaseInput name="username" placeholder="Login" type="text" />
         <BaseInput name="password" placeholder="Password" type="password" />

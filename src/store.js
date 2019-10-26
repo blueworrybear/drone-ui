@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import * as actions from "./actions";
 import AnsiUp from "ansi_up";
 import * as config from "./actions/config";
+import {base} from "./router/router";
 import { isBuildFinished } from "@/lib/buildHelper";
 
 Vue.use(Vuex);
@@ -119,6 +120,8 @@ export default new Vuex.Store({
     instance: {
       url: config.instance || `${window.location.protocol}//${window.location.host}`
     },
+
+    base: base,
 
     // todo use collection style (like object in builds[slug])
     latest: {},

@@ -26,7 +26,7 @@
       <UserMenu :user="user"/>
     </div>
 
-    <Button v-if="!userPresent" href="/login" class="login" size="l" theme="light">Login</Button>
+    <Button v-if="!userPresent" :href="this.$store.state.base + '/login'" class="login" size="l" theme="light">Login</Button>
   </header>
 </template>
 

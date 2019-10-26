@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "homepage": ".",
   "dependencies": {
     "ansi_up": "^3.0.0",
     "lodash.throttle": "^4.1.1",

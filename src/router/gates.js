@@ -29,7 +29,7 @@ export const authorizer = (store, window) => (to, from, next) => {
   // routes. If the user is not authenticated,
   // redirect to login.
   if (to.meta && to.meta.requiresAuth && !store.getters.userPresent) {
-    window.location.href = "/login";
+    window.location.href = `${store.state.base}/login`;
   } else {
     // proceed to the next guard.
     next();
